@@ -44,7 +44,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page">
+    <div className="contact-page" id="contact">
 
       {/* ================= MAIN CONTENT ================= */}
       <main className="contact-container">

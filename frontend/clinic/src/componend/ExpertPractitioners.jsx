@@ -13,7 +13,7 @@ const practitioners = [
 
 function ExpertPractitioners() {
   return (
-    <section className="experts-section">
+    <section className="experts-section" id="experts">
 
       <div className="experts-container">
 

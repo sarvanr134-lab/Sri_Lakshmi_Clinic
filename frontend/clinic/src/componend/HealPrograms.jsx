@@ -56,28 +56,36 @@ function HealingPrograms() {
   const carouselRef = useRef(null);
 
   const scrollLeft = () => {
-    carouselRef.current.scrollBy({
-      left: -320,
-      behavior: "smooth",
-    });
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: -320,
+        behavior: "smooth",
+      });
+    }
   };
 
   const scrollRight = () => {
-    carouselRef.current.scrollBy({
-      left: 320,
-      behavior: "smooth",
-    });
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: 320,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
-    <section className="healing-section">
+    <section id="services" className="healing-section">
       <div className="healing-container">
 
         {/* Heading */}
         <div className="healing-heading">
-          <span className="section-badge">What We Offer</span>
+          <span className="section-badge">
+            What We Offer
+          </span>
 
-          <h2>Our Healing Programs</h2>
+          <h2>
+            Our Healing Programs
+          </h2>
 
           <p>
             A comprehensive suite of natural therapies designed to treat the
@@ -89,17 +97,23 @@ function HealingPrograms() {
         <div className="carousel-wrapper">
 
           <button
+            type="button"
             className="carousel-btn carousel-prev"
             onClick={scrollLeft}
-            aria-label="Previous"
+            aria-label="Previous program"
           >
             &#10094;
           </button>
 
-          <div className="programs-carousel" ref={carouselRef}>
+          <div
+            className="programs-carousel"
+            ref={carouselRef}
+          >
             {programs.map((program, index) => (
-              <div className="program-card" key={index}>
-
+              <div
+                className="program-card"
+                key={index}
+              >
                 <img
                   src={program.image}
                   alt={program.title}
@@ -112,9 +126,13 @@ function HealingPrograms() {
                     {program.icon}
                   </div>
 
-                  <h3>{program.title}</h3>
+                  <h3>
+                    {program.title}
+                  </h3>
 
-                  <p>{program.description}</p>
+                  <p>
+                    {program.description}
+                  </p>
 
                 </div>
               </div>
@@ -122,16 +140,16 @@ function HealingPrograms() {
           </div>
 
           <button
+            type="button"
             className="carousel-btn carousel-next"
             onClick={scrollRight}
-            aria-label="Next"
+            aria-label="Next program"
           >
             &#10095;
           </button>
 
         </div>
 
-        {/* Mobile dots / decorative line */}
         <div className="carousel-line"></div>
 
       </div>

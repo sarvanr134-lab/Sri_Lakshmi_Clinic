@@ -17,14 +17,21 @@ body {
 /* =========================
    MAIN CONTAINER
 ========================= */
+.contact-page{
+  min-height: calc(100vh - 80px);
+}
 
 .contact-container {
   max-width: 830px;
   margin: auto;
 
   padding: 64px 20px 80px;
+  /* display: grid; */
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 40px auto 0;
 }
-
 
 /* =========================
    HEADING

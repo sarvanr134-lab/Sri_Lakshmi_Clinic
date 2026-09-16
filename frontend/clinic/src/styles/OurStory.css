@@ -5,6 +5,7 @@
   background: #effcf6;
   padding: 65px 20px;
   box-sizing: border-box;
+  /* min-height: calc(100vh - 80px); */
 }
 
 /* Container */

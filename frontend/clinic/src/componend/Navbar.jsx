@@ -1,39 +1,72 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
+
       <div className="navbar-container">
 
         {/* Logo */}
-        <Link to="/" className="navbar-logo">
+        <a href="#home" className="navbar-logo">
           <span className="logo-icon">♧</span>
-          <span>Sri Lakshmi Clinic</span>
-        </Link>
+
+          <span>
+            Sri Lakshmi Clinic
+          </span>
+        </a>
+
 
         {/* Navigation */}
         <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/experts">Our Experts</Link>
-          <Link to="/contact">Contact</Link>
+
+          <a href="#home">
+            Home
+          </a>
+
+          <a href="#services">
+            Services
+          </a>
+
+          <a href="#about">
+            About Us
+          </a>
+
+          <a href="#experts">
+            Our Experts
+          </a>
+
+          <a href="#contact">
+            Contact
+          </a>
+
         </div>
+
 
         {/* Right side */}
         <div className="nav-right">
-          <a href="tel:+919600661095" className="phone">
-            ☎ <span>+91 96006 61095</span>
+
+          <a
+            href="tel:+919600661095"
+            className="phone"
+          >
+            ☎
+            <span>
+              +91 96006 61095
+            </span>
           </a>
 
-          <Link to="/booking" className="booking-btn">
+          <a
+            href="#booking"
+            className="booking-btn"
+          >
             Book a Session
-          </Link>
+          </a>
+
         </div>
 
       </div>
+
     </nav>
   );
 };

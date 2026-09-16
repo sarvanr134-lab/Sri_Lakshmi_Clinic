@@ -4,7 +4,7 @@ import banner_img from '../assets/clinic_banner.jpeg'
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="home" id="home">
         <div className="home-content">
             <div className="home-text">
                 <div className="home-badge">

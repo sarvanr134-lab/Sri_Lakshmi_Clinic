@@ -31,7 +31,7 @@ const stats = [
 
 function OurStory() {
   return (
-    <section className="our-story">
+    <section className="our-story" id="about">
       <div className="story-container">
 
         {/* Left Content */}
