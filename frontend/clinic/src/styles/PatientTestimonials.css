@@ -1,0 +1,626 @@
+/* =========================================
+   TESTIMONIAL SECTION
+========================================= */
+
+.testimonials-section {
+  width: 100%;
+  background: #effcf6;
+
+  padding: 65px 20px 80px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+.testimonials-container {
+  width: 100%;
+  max-width: 920px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.testimonials-heading {
+  text-align: center;
+
+  margin-bottom: 22px;
+}
+
+.testimonials-badge {
+  display: inline-block;
+
+  padding: 6px 13px;
+
+  background: #d7f9e9;
+
+  color: #008b63;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  margin-bottom: 10px;
+}
+
+.testimonials-heading h2 {
+  margin: 0 0 10px;
+
+  color: #082c45;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 28px;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+}
+
+.testimonials-heading p {
+  margin: 0;
+
+  color: #557084;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   WRITE REVIEW BUTTON
+========================================= */
+
+.review-button-container {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.add-review-btn {
+  border: none;
+
+  background: #008b63;
+
+  color: #ffffff;
+
+  padding: 10px 21px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.add-review-btn:hover {
+  background: #006f50;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   REVIEW FORM
+========================================= */
+
+.review-form {
+  width: 100%;
+
+  max-width: 650px;
+
+  margin: 0 auto 40px;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #c9f0df;
+
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px rgba(0, 100, 70, 0.08);
+}
+
+.review-form h3 {
+  margin: 0 0 22px;
+
+  text-align: center;
+
+  color: #082c45;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+}
+
+
+/* Form row */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+
+/* Form group */
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #31526a;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* Inputs */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 10px 11px;
+
+  border: 1px solid #cce9dd;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #fbfffd;
+
+  color: #31526a;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  transition: 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9aabb4;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #00a878;
+
+  box-shadow: 0 0 0 2px rgba(0, 168, 120, 0.08);
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 100px;
+}
+
+
+/* Submit button */
+
+.submit-review-btn {
+  display: block;
+
+  margin: 5px auto 0;
+
+  padding: 10px 25px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: #008b63;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.submit-review-btn:hover {
+  background: #006f50;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   INFINITE SLIDER
+========================================= */
+
+.testimonial-slider {
+  width: 100%;
+
+  overflow: hidden;
+
+  position: relative;
+
+  padding: 10px 0 25px;
+}
+
+
+/*
+   The track contains two identical groups.
+
+   Group 1:
+   Review 1 → Review 2 → Review 3
+
+   Group 2:
+   Review 1 → Review 2 → Review 3
+
+   When Group 1 moves away,
+   Group 2 takes its place.
+*/
+
+.testimonial-track {
+  display: flex;
+
+  width: max-content;
+
+  animation: infiniteTestimonials 30s linear infinite;
+
+  will-change: transform;
+}
+
+
+/* Each group has exactly the same width */
+
+.testimonial-group {
+  display: flex;
+
+  gap: 24px;
+
+  padding-right: 24px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   TESTIMONIAL CARD
+========================================= */
+
+.testimonial-card {
+  flex: 0 0 290px;
+
+  width: 290px;
+
+  min-height: 215px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #c9f0df;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  padding: 0 18px 18px;
+
+  box-shadow: 0 3px 12px rgba(0, 100, 70, 0.04);
+
+  transition: transform 0.3s ease;
+}
+
+
+/*
+   IMPORTANT:
+   No animation-play-state here.
+
+   Therefore the carousel will NEVER
+   stop when the mouse is over a card.
+*/
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.testimonial-top {
+  width: 100%;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* Stars */
+
+.stars {
+  color: #f5a900;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+
+  white-space: nowrap;
+}
+
+.empty-stars {
+  color: #dce8e3;
+}
+
+
+/* Quote */
+
+.quote {
+  width: 48px;
+
+  height: 48px;
+
+  margin-right: -18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #eafff5;
+
+  color: #2fd99c;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 28px;
+
+  font-weight: bold;
+}
+
+
+/* =========================================
+   REVIEW TEXT
+========================================= */
+
+.testimonial-review {
+  margin: 8px 0 16px;
+
+  color: #425c6c;
+
+  font-size: 10.5px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.testimonial-divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin-bottom: 12px;
+
+  background: #e2f1eb;
+}
+
+
+/* =========================================
+   PATIENT INFORMATION
+========================================= */
+
+.patient-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* Avatar */
+
+.patient-avatar {
+  width: 30px;
+
+  height: 30px;
+
+  min-width: 30px;
+
+  border-radius: 50%;
+
+  background: #d5f8e8;
+
+  color: #008b63;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* Patient details */
+
+.patient-details {
+  min-width: 0;
+}
+
+.patient-info h4 {
+  margin: 0 0 3px;
+
+  color: #203c4e;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.patient-info span {
+  display: block;
+
+  color: #7a8b95;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   INFINITE ANIMATION
+========================================= */
+
+@keyframes infiniteTestimonials {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================================
+   RESET BUTTON
+========================================= */
+
+.reset-reviews-btn {
+  display: block;
+
+  margin: 5px auto 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #78918b;
+
+  font-size: 9px;
+
+  cursor: pointer;
+
+  opacity: 0.7;
+}
+
+.reset-reviews-btn:hover {
+  color: #008b63;
+
+  opacity: 1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .testimonials-container {
+    max-width: 650px;
+  }
+
+  .testimonial-card {
+    flex-basis: 280px;
+
+    width: 280px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .testimonials-section {
+    padding: 50px 18px 60px;
+  }
+
+
+  .testimonials-heading h2 {
+    font-size: 24px;
+  }
+
+
+  .testimonials-heading p {
+    font-size: 11px;
+  }
+
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+
+  .review-form {
+    padding: 20px 16px;
+  }
+
+
+  .testimonial-card {
+    flex-basis: 280px;
+
+    width: 280px;
+  }
+
+
+  .testimonial-group {
+    gap: 16px;
+
+    padding-right: 16px;
+  }
+
+
+  .testimonial-track {
+    animation-duration: 25s;
+  }
+
+}

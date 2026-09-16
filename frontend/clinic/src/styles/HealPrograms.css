@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+}
+
+.healing-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 75px 0 90px;
+  overflow: hidden;
+}
+
+.healing-container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ---------------- HEADING ---------------- */
+
+.healing-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+
+.section-badge {
+  display: inline-block;
+  background: #d8f8ed;
+  color: #16835f;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.healing-heading h2 {
+  margin: 0;
+  color: #17202a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.healing-heading p {
+  margin: 15px auto 0;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* ---------------- CAROUSEL ---------------- */
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.programs-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 5px 5px 15px;
+}
+
+.programs-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------------- CARD ---------------- */
+
+.program-card {
+  flex: 0 0 calc(25% - 15px);
+  min-width: 270px;
+  background: #ffffff;
+  border: 1px solid #c8f1e2;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(20, 120, 90, 0.12);
+  border-color: #9be4cf;
+}
+
+/* ---------------- IMAGE ---------------- */
+
+.program-image {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* ---------------- CONTENT ---------------- */
+
+.program-content {
+  padding: 26px 20px 24px;
+}
+
+.program-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #d8f8ed;
+  color: #15966c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.program-card:nth-child(3) .program-icon {
+  background: #fff2c7;
+  color: #d29a00;
+}
+
+.program-card:nth-child(4) .program-icon {
+  background: #fff2c7;
+  color: #d29a00;
+}
+
+.program-content h3 {
+  margin: 0 0 14px;
+  color: #18202a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.program-content p {
+  margin: 0;
+  color: #687789;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+.carousel-btn {
+  position: absolute;
+  top: 45%;
+  z-index: 5;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #ccefe2;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #158a65;
+
+  font-size: 18px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.25s ease;
+}
+
+.carousel-btn:hover {
+  background: #13845f;
+  color: #ffffff;
+}
+
+.carousel-prev {
+  left: -20px;
+}
+
+.carousel-next {
+  right: -20px;
+}
+
+/* ---------------- BOTTOM LINE ---------------- */
+
+.carousel-line {
+  width: 70px;
+  height: 3px;
+  background: #20a477;
+  border-radius: 5px;
+  margin: 25px auto 0;
+}
+
+/* ---------------- TABLET ---------------- */
+
+@media (max-width: 1100px) {
+  .program-card {
+    flex: 0 0 calc(33.333% - 14px);
+  }
+
+  .carousel-prev {
+    left: -10px;
+  }
+
+  .carousel-next {
+    right: -10px;
+  }
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 768px) {
+  .healing-section {
+    padding: 55px 0 65px;
+  }
+
+  .healing-container {
+    width: 92%;
+  }
+
+  .healing-heading {
+    margin-bottom: 35px;
+  }
+
+  .healing-heading h2 {
+    font-size: 30px;
+  }
+
+  .healing-heading p {
+    font-size: 14px;
+  }
+
+  .program-card {
+    flex: 0 0 82%;
+    min-width: 82%;
+  }
+
+  .program-image {
+    height: 200px;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+}
+
+/* ---------------- SMALL MOBILE ---------------- */
+
+@media (max-width: 480px) {
+  .healing-heading h2 {
+    font-size: 27px;
+  }
+
+  .program-card {
+    flex: 0 0 88%;
+    min-width: 88%;
+  }
+
+  .program-image {
+    height: 190px;
+  }
+}
