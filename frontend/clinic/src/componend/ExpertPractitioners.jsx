@@ -72,11 +72,11 @@ function ExpertPractitioners() {
                 {/* Social icons */}
                 <div className="expert-social">
 
-                  <a href="#" aria-label="Email">
+                  <a href="https://www.email.com/" aria-label="Email">
                     ✉
                   </a>
 
-                  <a href="#" aria-label="LinkedIn">
+                  <a href="https://www.linkedin.com/" aria-label="LinkedIn">
                     in
                   </a>
 
