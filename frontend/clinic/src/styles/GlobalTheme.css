@@ -1,0 +1,167 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5faf8;
+  --bg-card: #ffffff;
+  --bg-section: #f8fcfa;
+
+  --text-primary: #30384d;
+  --text-secondary: #5f6878;
+  --text-heading: #006f54;
+
+  --primary: #008060;
+  --primary-hover: #006b50;
+
+  --border: #dceee8;
+
+  --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  --button-text: #ffffff;
+
+  --input-bg: #ffffff;
+  --input-border: #d8e5e1;
+
+  --navbar-bg: #ffffff;
+
+  --footer-bg: #12352e;
+  --footer-text: #ffffff;
+
+  --theme-button-bg: #f1f7f5;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-theme {
+  --bg-primary: #101615;
+  --bg-secondary: #151d1b;
+  --bg-card: #1b2522;
+  --bg-section: #141c1a;
+
+  --text-primary: #e8f2ef;
+  --text-secondary: #b7c7c2;
+  --text-heading: #72d9c0;
+
+  --primary: #20a889;
+  --primary-hover: #159274;
+
+  --border: #2b403a;
+
+  --shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+
+  --button-text: #ffffff;
+
+  --input-bg: #1b2522;
+  --input-border: #344941;
+
+  --navbar-bg: #151c1a;
+
+  --footer-bg: #0b211c;
+  --footer-text: #e8f2ef;
+
+  --theme-button-bg: #25322e;
+}
+
+
+/* =========================
+   COMMON ELEMENTS
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-heading);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+section {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* Cards */
+
+.card {
+  background: var(--bg-card);
+  color: var(--text-primary);
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* Inputs */
+
+input,
+textarea,
+select {
+  background: var(--input-bg);
+  color: var(--text-primary);
+
+  border: 1px solid var(--input-border);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+
+/* Smooth theme transition */
+
+body,
+section,
+footer,
+div,
+article,
+button,
+input,
+textarea,
+select {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}

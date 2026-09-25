@@ -1,7 +1,26 @@
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark-theme");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
+
+  const toggleTheme = () => {
+    setDarkMode((previousMode) => !previousMode);
+  };
+
   return (
     <nav className="navbar">
 
@@ -9,7 +28,9 @@ const Navbar = () => {
 
         {/* Logo */}
         <a href="#home" className="navbar-logo">
-          <span className="logo-icon">♧</span>
+          <span className="logo-icon">
+            ♧
+          </span>
 
           <span>
             Sri Lakshmi Clinic
@@ -43,19 +64,36 @@ const Navbar = () => {
         </div>
 
 
-        {/* Right side */}
+        {/* Right Side */}
         <div className="nav-right">
 
+          {/* Theme Button */}
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={toggleTheme}
+            title={darkMode ? "Light Mode" : "Dark Mode"}
+          >
+            {darkMode ? "☀️" : "🌙"}
+          </button>
+
+
+          {/* Phone */}
           <a
             href="tel:+919600661095"
             className="phone"
           >
-            ☎
+            <span className="phone-icon">
+              ☎
+            </span>
+
             <span>
               +91 96006 61095
             </span>
           </a>
 
+
+          {/* Booking */}
           <a
             href="#booking"
             className="booking-btn"

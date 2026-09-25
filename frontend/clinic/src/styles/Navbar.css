@@ -1,19 +1,19 @@
-* {
-  box-sizing: border-box;
-}
 
 .navbar {
   width: 100%;
   height: 66px;
-  background: #ffffff;
-  /* border-top: 1px solid #333; */
-  border-bottom: 2px solid #a7e8d4;
+
+  background: var(--navbar-bg);
+
+  border-bottom: 2px solid var(--border);
+
   font-family: Arial, sans-serif;
 }
 
 .navbar-container {
   max-width: 1250px;
   height: 100%;
+
   margin: 0 auto;
   padding: 0 20px;
 
@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 
 /* Logo */
 
@@ -30,7 +31,9 @@
   gap: 9px;
 
   text-decoration: none;
-  color: #006f54;
+
+  color: var(--text-heading);
+
   font-size: 20px;
   font-weight: 600;
 }
@@ -38,16 +41,19 @@
 .logo-icon {
   width: 28px;
   height: 28px;
+
   border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #008060;
+  background: var(--primary);
   color: white;
+
   font-size: 17px;
 }
+
 
 /* Navigation */
 
@@ -59,16 +65,20 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #30384d;
+
+  color: var(--text-primary);
+
   font-size: 15px;
+
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #008060;
+  color: var(--primary);
 }
 
-/* Right side */
+
+/* Right Side */
 
 .nav-right {
   display: flex;
@@ -76,40 +86,82 @@
   gap: 22px;
 }
 
+
+/* Theme Button */
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--theme-button-bg);
+
+  color: var(--text-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
+}
+
+
+/* Phone */
+
 .phone {
   display: flex;
   align-items: center;
   gap: 7px;
 
-  color: #30384d;
+  color: var(--text-primary);
+
   text-decoration: none;
+
   font-size: 14px;
+}
+
+.phone:hover {
+  color: var(--primary);
 }
 
 .phone-icon {
   font-size: 20px;
 }
 
-/* Booking button */
+
+/* Booking */
 
 .booking-btn {
   padding: 10px 18px;
 
-  background: #008060;
-  color: white;
+  background: var(--primary);
+
+  color: var(--button-text);
 
   border-radius: 8px;
+
   text-decoration: none;
 
   font-size: 14px;
   font-weight: 500;
-
-  transition: background 0.2s ease;
 }
 
 .booking-btn:hover {
-  background: #006b50;
+  background: var(--primary-hover);
 }
+
 
 /* Responsive */
 
@@ -134,5 +186,14 @@
 
   .navbar-container {
     justify-content: space-between;
+  }
+
+  .navbar-logo {
+    font-size: 18px;
+  }
+
+  .booking-btn {
+    padding: 9px 13px;
+    font-size: 13px;
   }
 }
