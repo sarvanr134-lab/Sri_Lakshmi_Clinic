@@ -1,25 +1,31 @@
-/* =========================
-   Expert Practitioners
-========================= */
+/* =====================================================
+   EXPERT PRACTITIONERS
+===================================================== */
 
 .experts-section {
   width: 100%;
-  background: #ffffff;
+
+  background: var(--bg-primary);
 
   padding: 70px 20px 65px;
 
   box-sizing: border-box;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .experts-container {
   max-width: 920px;
+
   margin: 0 auto;
 }
 
 
-/* =========================
-   Heading
-========================= */
+/* =====================================================
+   HEADING
+===================================================== */
 
 .experts-heading {
   text-align: center;
@@ -27,13 +33,20 @@
   margin-bottom: 42px;
 }
 
+
+/* =====================================================
+   BADGE
+===================================================== */
+
 .experts-badge {
   display: inline-block;
 
-  background: #d7f9e9;
-  color: #008b63;
+  background: var(--experts-badge-bg);
+
+  color: var(--experts-badge-text);
 
   font-size: 10px;
+
   font-weight: 600;
 
   padding: 6px 13px;
@@ -41,34 +54,54 @@
   border-radius: 20px;
 
   margin-bottom: 10px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
+
+
+/* =====================================================
+   HEADING
+===================================================== */
 
 .experts-heading h2 {
   margin: 0 0 10px;
 
-  color: #082c45;
+  color: var(--text-heading);
 
   font-family: Georgia, "Times New Roman", serif;
 
   font-size: 27px;
+
   font-weight: 500;
 
   line-height: 1.2;
+
+  transition: color 0.3s ease;
 }
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
 
 .experts-heading p {
   margin: 0;
 
-  color: #557084;
+  color: var(--text-secondary);
 
   font-size: 12px;
+
   line-height: 1.65;
+
+  transition: color 0.3s ease;
 }
 
 
-/* =========================
-   Cards Grid
-========================= */
+/* =====================================================
+   CARDS GRID
+===================================================== */
 
 .experts-grid {
   display: grid;
@@ -76,40 +109,69 @@
   grid-template-columns: repeat(3, 1fr);
 
   gap: 20px;
+
+  justify-items: center;
 }
 
 
-/* =========================
-   Card
-========================= */
+/* =====================================================
+   EXPERT CARD
+===================================================== */
 
 .expert-card {
-  background: #ffffff;
+  width: 100%;
 
-  border: 1px solid #c9f0df;
+  max-width: 293px;
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--experts-border);
 
   border-radius: 9px;
 
   overflow: hidden;
 
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .expert-card:hover {
   transform: translateY(-5px);
 
-  box-shadow: 0 12px 25px rgba(0, 100, 70, 0.12);
+  box-shadow: var(--experts-card-shadow);
 }
 
 
-/* =========================
-   Image
-========================= */
+/* =====================================================
+   CENTER SINGLE DOCTOR
+===================================================== */
+
+.experts-grid:has(.expert-card:only-child) {
+  grid-template-columns: 1fr;
+
+  justify-items: center;
+}
+
+.experts-grid:has(.expert-card:only-child) .expert-card {
+  width: 100%;
+
+  max-width: 293px;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
 
 .expert-image {
   position: relative;
 
   width: 100%;
+
   height: 165px;
 
   overflow: hidden;
@@ -117,6 +179,7 @@
 
 .expert-image img {
   width: 100%;
+
   height: 100%;
 
   object-fit: cover;
@@ -125,19 +188,22 @@
 }
 
 
-/* Qualification badge */
+/* =====================================================
+   QUALIFICATION BADGE
+===================================================== */
 
 .qualification {
   position: absolute;
 
   bottom: 8px;
+
   left: 50%;
 
   transform: translateX(-50%);
 
   white-space: nowrap;
 
-  background: #008b63;
+  background: var(--primary);
 
   color: #ffffff;
 
@@ -146,13 +212,14 @@
   border-radius: 12px;
 
   font-size: 9px;
+
   font-weight: 600;
 }
 
 
-/* =========================
-   Card Content
-========================= */
+/* =====================================================
+   CARD CONTENT
+===================================================== */
 
 .expert-content {
   text-align: center;
@@ -160,46 +227,74 @@
   padding: 27px 15px 18px;
 }
 
+
+/* =====================================================
+   EXPERT NAME
+===================================================== */
+
 .expert-content h3 {
   margin: 0 0 5px;
 
-  color: #172f40;
+  color: var(--text-heading);
 
   font-family: Georgia, "Times New Roman", serif;
 
   font-size: 15px;
 
   font-weight: 500;
+
+  transition: color 0.3s ease;
 }
+
+
+/* =====================================================
+   EXPERT ROLE
+===================================================== */
 
 .expert-role {
   display: block;
 
-  color: #008b63;
+  color: var(--primary);
 
   font-size: 9px;
 
   margin-bottom: 24px;
+
+  transition: color 0.3s ease;
 }
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
 
 .expert-content p {
   margin: 0;
 
-  color: #536a79;
+  color: var(--text-secondary);
 
   font-size: 9px;
 
   line-height: 1.5;
+
+  transition: color 0.3s ease;
 }
+
+
+/* =====================================================
+   STRONG TEXT
+===================================================== */
 
 .expert-content strong {
-  color: #344f61;
+  color: var(--text-primary);
+
+  transition: color 0.3s ease;
 }
 
 
-/* =========================
-   Social Icons
-========================= */
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
 
 .expert-social {
   display: flex;
@@ -214,34 +309,80 @@
 .expert-social a {
   text-decoration: none;
 
-  color: #74838d;
+  color: var(--social-color);
 
   font-size: 11px;
 
-  transition: color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .expert-social a:hover {
-  color: #008b63;
+  color: var(--primary);
+
+  transform: translateY(-2px);
 }
 
 
-/* =========================
-   Tablet
-========================= */
+/* =====================================================
+   LIGHT MODE VARIABLES
+===================================================== */
+
+:root {
+  --experts-badge-bg: #d7f9e9;
+
+  --experts-badge-text: #008b63;
+
+  --experts-border: #c9f0df;
+
+  --experts-card-shadow:
+    0 12px 25px rgba(0, 100, 70, 0.12);
+
+  --social-color: #74838d;
+}
+
+
+/* =====================================================
+   DARK MODE VARIABLES
+===================================================== */
+
+body.dark-theme {
+  --experts-badge-bg: #183d34;
+
+  --experts-badge-text: #72d9c0;
+
+  --experts-border: #2b403a;
+
+  --experts-card-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.35);
+
+  --social-color: #9aaba5;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 850px) {
 
+  .experts-section {
+    padding: 60px 20px;
+  }
+
   .experts-grid {
     grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
   }
 
 }
 
 
-/* =========================
-   Mobile
-========================= */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 600px) {
 
@@ -249,8 +390,16 @@
     padding: 50px 18px;
   }
 
+  .experts-heading {
+    margin-bottom: 32px;
+  }
+
   .experts-heading h2 {
     font-size: 24px;
+  }
+
+  .experts-heading p {
+    font-size: 11px;
   }
 
   .experts-heading p br {
@@ -265,8 +414,36 @@
     margin: 0 auto;
   }
 
+  .expert-card {
+    max-width: 350px;
+  }
+
   .expert-image {
     height: 210px;
+  }
+
+  .expert-content {
+    padding: 25px 15px 18px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+@media (max-width: 400px) {
+
+  .experts-section {
+    padding: 45px 15px;
+  }
+
+  .experts-heading h2 {
+    font-size: 22px;
+  }
+
+  .expert-image {
+    height: 190px;
   }
 
 }

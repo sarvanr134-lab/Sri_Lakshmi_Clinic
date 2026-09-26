@@ -4,7 +4,6 @@ import {
   Phone,
   Mail,
   Clock,
- 
   ChevronDown
 } from "lucide-react";
 import "../styles/Contact.css";
@@ -46,7 +45,9 @@ const Contact = () => {
   return (
     <div className="contact-page" id="contact">
 
-      {/* ================= MAIN CONTENT ================= */}
+      {/* Booking Anchor */}
+      <div id="booking" className="booking-anchor"></div>
+
       <main className="contact-container">
 
         {/* Page Heading */}
@@ -67,47 +68,40 @@ const Contact = () => {
 
         </section>
 
-
-        {/* ================= CONTENT GRID ================= */}
+        {/* Content Grid */}
         <section className="contact-grid">
 
-          {/* ================= LEFT SIDE ================= */}
+          {/* Left Side */}
           <div className="contact-info">
-
 
             {/* Visit Us */}
             <div className="info-card">
 
               <div className="info-title">
-
                 <div className="info-icon">
                   <MapPin size={17} />
                 </div>
 
                 <h3>Visit Us</h3>
-
               </div>
 
               <p>
-                47 Wellness Grove Lane<br />
-                Serene Valley, Bangalore<br />
-                Karnataka 560001
+               Sardar Street, Dr. Rajendra Prasad Road, <br/>
+               near Anna Park / Venkateswara Hotel, <br/>
+               Udumalaipettai, Tamil Nadu 642126.
               </p>
 
             </div>
-
 
             {/* Call Us */}
             <div className="info-card">
 
               <div className="info-title">
-
                 <div className="info-icon">
                   <Phone size={17} />
                 </div>
 
                 <h3>Call Us</h3>
-
               </div>
 
               <p>
@@ -117,18 +111,15 @@ const Contact = () => {
 
             </div>
 
-
             {/* Email Us */}
             <div className="info-card">
 
               <div className="info-title">
-
                 <div className="info-icon">
                   <Mail size={17} />
                 </div>
 
                 <h3>Email Us</h3>
-
               </div>
 
               <p>
@@ -138,31 +129,27 @@ const Contact = () => {
 
             </div>
 
-
             {/* Hours */}
             <div className="info-card">
 
               <div className="info-title">
-
                 <div className="info-icon">
                   <Clock size={17} />
                 </div>
 
                 <h3>Hours</h3>
-
               </div>
 
               <p>
-                Mon – Sat: 7:00 AM – 7:00 PM<br />
-                Sunday: 8:00 AM – 1:00 PM
+                Monday to Saturday: 9:30 AM – 7:30 PM<br/>
+                Sunday: 9:30 AM – 5:30 PM
               </p>
 
             </div>
 
           </div>
 
-
-          {/* ================= RIGHT SIDE FORM ================= */}
+          {/* Right Side Form */}
           <div className="consultation-card">
 
             <h2>
@@ -173,7 +160,6 @@ const Contact = () => {
               Fill in your details and we will match you with the perfect
               program
             </p>
-
 
             <form onSubmit={handleSubmit}>
 
@@ -197,7 +183,6 @@ const Contact = () => {
 
                 </div>
 
-
                 <div className="form-group">
 
                   <label>
@@ -217,7 +202,6 @@ const Contact = () => {
 
               </div>
 
-
               {/* Row 2 */}
               <div className="form-row">
 
@@ -236,7 +220,6 @@ const Contact = () => {
                   />
 
                 </div>
-
 
                 <div className="form-group">
 
@@ -284,7 +267,6 @@ const Contact = () => {
 
               </div>
 
-
               {/* Message */}
               <div className="form-group message-group">
 
@@ -301,7 +283,6 @@ const Contact = () => {
                 />
 
               </div>
-
 
               {/* Submit */}
               <button

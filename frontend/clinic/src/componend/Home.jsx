@@ -20,9 +20,9 @@ const Home = () => {
                 </p>
 
                 <div className='tag_row'>
-                    <span className='tag'>🌿 Naturopathy</span>
-                    <span className='tag'>🧘 Yoga & Pranayama</span>
-                    <span className='tag'>✳️ Ayurveda</span>
+                    <a className='tag' href="https://my.clevelandclinic.org/health/articles/naturopathy" target="_blank" rel="noopener noreferrer">🌿 Naturopathy</a>
+                    <a className='tag' href="https://theyogatherapyinstitute.org/blogs/yoga-therapy-blog/what-is-yoga-therapy?srsltid=AU7gw4VVmm5M5J3b_ymwdegP02AtgcD32ASFGj1qww1ziNQXeJ1tLj47" target="_blank" rel="noopener noreferrer">🧘 Yoga & Pranayama</a>
+                    <a className='tag' href="https://en.wikipedia.org/wiki/Ayurveda" target="_blank" rel="noopener noreferrer">✳️ Ayurveda</a>
                 </div>
 
                 <div className='Btn_row'>

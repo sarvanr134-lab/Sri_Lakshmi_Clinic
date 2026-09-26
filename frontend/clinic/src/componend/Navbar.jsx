@@ -1,8 +1,7 @@
-
 import React, { useEffect, useState } from "react";
 import "../styles/Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ onBookingClick }) => {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
@@ -23,46 +22,22 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-
       <div className="navbar-container">
 
         {/* Logo */}
         <a href="#home" className="navbar-logo">
-          <span className="logo-icon">
-            ♧
-          </span>
-
-          <span>
-            Sri Lakshmi Clinic
-          </span>
+          <span className="logo-icon">♧</span>
+          <span>Sri Lakshmi Clinic</span>
         </a>
-
 
         {/* Navigation */}
         <div className="nav-links">
-
-          <a href="#home">
-            Home
-          </a>
-
-          <a href="#services">
-            Services
-          </a>
-
-          <a href="#about">
-            About Us
-          </a>
-
-          <a href="#experts">
-            Our Experts
-          </a>
-
-          <a href="#contact">
-            Contact
-          </a>
-
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About Us</a>
+          <a href="#experts">Our Experts</a>
+          <a href="#contact">Contact</a>
         </div>
-
 
         {/* Right Side */}
         <div className="nav-right">
@@ -77,34 +52,26 @@ const Navbar = () => {
             {darkMode ? "☀️" : "🌙"}
           </button>
 
-
           {/* Phone */}
           <a
-            href="tel:+919600661095"
+            href="tel:+919361102449"
             className="phone"
           >
-            <span className="phone-icon">
-              ☎
-            </span>
-
-            <span>
-              +91 96006 61095
-            </span>
+            <span className="phone-icon">☎</span>
+            <span>+91 93611 02449</span>
           </a>
-
 
           {/* Booking */}
-          <a
-            href="#booking"
+          <button
+            type="button"
             className="booking-btn"
+            onClick={onBookingClick}
           >
             Book a Session
-          </a>
+          </button>
 
         </div>
-
       </div>
-
     </nav>
   );
 };

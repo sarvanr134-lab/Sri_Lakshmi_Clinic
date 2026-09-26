@@ -1,130 +1,202 @@
-/* Main Section */
+/* =====================================================
+   OUR STORY / ABOUT SECTION
+===================================================== */
 
 .our-story {
   width: 100%;
-  background: #effcf6;
+
+  background: var(--bg-secondary);
+
   padding: 65px 20px;
+
   box-sizing: border-box;
-  /* min-height: calc(100vh - 80px); */
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-/* Container */
+
+/* =====================================================
+   CONTAINER
+===================================================== */
 
 .story-container {
   max-width: 910px;
+
   margin: 0 auto;
 
   display: grid;
+
   grid-template-columns: 1.1fr 0.9fr;
+
   gap: 40px;
 
   align-items: center;
 }
 
-/* Left Content */
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
 
 .story-content {
   width: 100%;
 }
 
-/* Badge */
+
+/* =====================================================
+   BADGE
+===================================================== */
 
 .story-badge {
   display: inline-block;
 
-  background: #d7f9e8;
-  color: #008b63;
+  background: var(--story-badge-bg);
+
+  color: var(--story-badge-text);
 
   font-size: 11px;
+
   font-weight: 600;
 
   padding: 6px 13px;
+
   border-radius: 20px;
 
   margin-bottom: 12px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-/* Heading */
+
+/* =====================================================
+   HEADING
+===================================================== */
 
 .story-content h2 {
   margin: 0 0 18px;
 
-  color: #082c45;
+  color: var(--text-heading);
 
   font-family: Georgia, "Times New Roman", serif;
 
   font-size: 28px;
+
   line-height: 1.08;
+
   font-weight: 500;
+
+  transition: color 0.3s ease;
 }
 
-/* Paragraph */
+
+/* =====================================================
+   PARAGRAPH
+===================================================== */
 
 .story-content p {
   margin: 0 0 18px;
 
-  color: #31526a;
+  color: var(--text-secondary);
 
   font-size: 13px;
+
   line-height: 1.7;
+
+  transition: color 0.3s ease;
 }
 
-/* Features */
+
+/* =====================================================
+   FEATURES
+===================================================== */
 
 .features-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
 
   column-gap: 28px;
+
   row-gap: 17px;
 
   margin-top: 25px;
 }
 
+
+/* Feature */
+
 .feature-item {
   display: flex;
+
   align-items: flex-start;
+
   gap: 9px;
 
-  color: #31526a;
+  color: var(--text-secondary);
 
   font-size: 11px;
+
   line-height: 1.4;
+
+  transition: color 0.3s ease;
 }
 
-/* Check Icon */
+
+/* =====================================================
+   CHECK ICON
+===================================================== */
 
 .check-icon {
   width: 14px;
+
   height: 14px;
 
   min-width: 14px;
 
-  border: 1.5px solid #00ae78;
+  border: 1.5px solid var(--primary);
+
   border-radius: 50%;
 
-  color: #00ae78;
+  color: var(--primary);
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   font-size: 9px;
+
   font-weight: bold;
 
   margin-top: 1px;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
-/* Right Side */
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
 
 .story-right {
   width: 100%;
 }
 
-/* Image */
+
+/* =====================================================
+   IMAGE
+===================================================== */
 
 .story-image {
   width: 100%;
+
   height: 168px;
 
   overflow: hidden;
@@ -133,11 +205,15 @@
 
   margin-bottom: 17px;
 
-  box-shadow: 0 7px 18px rgba(0, 80, 60, 0.10);
+  box-shadow: var(--story-image-shadow);
+
+  transition:
+    box-shadow 0.3s ease;
 }
 
 .story-image img {
   width: 100%;
+
   height: 100%;
 
   display: block;
@@ -145,7 +221,10 @@
   object-fit: cover;
 }
 
-/* Statistics Grid */
+
+/* =====================================================
+   STATISTICS GRID
+===================================================== */
 
 .stats-grid {
   display: grid;
@@ -155,50 +234,101 @@
   gap: 12px;
 }
 
-/* Stat Card */
+
+/* =====================================================
+   STAT CARD
+===================================================== */
 
 .stat-card {
   height: 85px;
 
-  background: #ffffff;
+  background: var(--bg-card);
 
-  border: 1px solid #ccefe2;
+  border: 1px solid var(--border);
 
   border-radius: 11px;
 
   display: flex;
+
   flex-direction: column;
 
   justify-content: center;
+
   align-items: center;
 
   text-align: center;
 
   box-sizing: border-box;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
+
+
+/* Number */
 
 .stat-card h3 {
   margin: 0 0 5px;
 
-  color: #008b63;
+  color: var(--primary);
 
   font-size: 26px;
+
   line-height: 1;
 
   font-weight: 600;
+
+  transition: color 0.3s ease;
 }
+
+
+/* Label */
 
 .stat-card p {
   margin: 0;
 
-  color: #466477;
+  color: var(--text-secondary);
 
   font-size: 10px;
+
+  transition: color 0.3s ease;
 }
 
-/* ----------------------------- */
-/* Tablet */
-/* ----------------------------- */
+
+/* =====================================================
+   LIGHT THEME VARIABLES
+===================================================== */
+
+:root {
+
+  --story-badge-bg: #d7f9e8;
+
+  --story-badge-text: #008b63;
+
+  --story-image-shadow:
+    0 7px 18px rgba(0, 80, 60, 0.10);
+}
+
+
+/* =====================================================
+   DARK THEME VARIABLES
+===================================================== */
+
+body.dark-theme {
+
+  --story-badge-bg: #183d34;
+
+  --story-badge-text: #72d9c0;
+
+  --story-image-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 850px) {
 
@@ -218,9 +348,9 @@
 }
 
 
-/* ----------------------------- */
-/* Mobile */
-/* ----------------------------- */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 600px) {
 

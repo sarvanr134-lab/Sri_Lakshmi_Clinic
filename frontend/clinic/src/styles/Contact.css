@@ -333,7 +333,9 @@ body {
   background: #056b4d;
 }
 
-
+.booking-anchor {
+  scroll-margin-top: 80px;
+}
 /* =========================
    RESPONSIVE
 ========================= */

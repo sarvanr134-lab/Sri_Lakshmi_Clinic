@@ -59,29 +59,29 @@ const Footer = () => {
           <h3>Our Therapies</h3>
 
           <ul>
-            <li><a href="#yoga">Yoga Therapy</a></li>
+            <li><a href="https://theyogatherapyinstitute.org/blogs/yoga-therapy-blog/what-is-yoga-therapy?srsltid=AU7gw4VVmm5M5J3b_ymwdegP02AtgcD32ASFGj1qww1ziNQXeJ1tLj47">Yoga Therapy</a></li>
             <li>
-              <a href="#naturopathy">
+              <a href="https://my.clevelandclinic.org/health/articles/naturopathy">
                 Naturopathy & Herbal Medicine
               </a>
             </li>
             <li>
-              <a href="#ayurveda">
+              <a href="https://en.wikipedia.org/wiki/Ayurveda">
                 Ayurveda Panchakarma
               </a>
             </li>
             <li>
-              <a href="#meditation">
+              <a href="https://en.wikipedia.org/wiki/Meditation">
                 Meditation & Pranayama
               </a>
             </li>
             <li>
-              <a href="#nutrition">
+              <a href="https://en.wikipedia.org/wiki/Nutrition">
                 Nutrition Counselling
               </a>
             </li>
             <li>
-              <a href="#retreats">
+              <a href="https://en.wikipedia.org/wiki/Wellness_retreat">
                 Wellness Retreats
               </a>
             </li>
@@ -96,11 +96,13 @@ const Footer = () => {
           <h3>Contact Info</h3>
 
           <p>
-            47 Wellness Grove Lane
+            Sardar Street, Dr. Rajendra Prasad Road, <br/>
+               near Anna Park / Venkateswara Hotel<br/>
+               
           </p>
 
           <p>
-            Serene Valley, Bangalore 560001
+            Udumalaipettai, Tamil Nadu 642126.
           </p>
 
           <p>

@@ -4,13 +4,18 @@
 
 .testimonials-section {
   width: 100%;
-  background: #effcf6;
+
+  background: var(--bg-secondary);
 
   padding: 65px 20px 80px;
 
   box-sizing: border-box;
 
   overflow: hidden;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .testimonials-container {
@@ -36,9 +41,9 @@
 
   padding: 6px 13px;
 
-  background: #d7f9e9;
+  background: var(--testimonial-badge-bg);
 
-  color: #008b63;
+  color: var(--testimonial-badge-text);
 
   border-radius: 20px;
 
@@ -47,12 +52,16 @@
   font-weight: 600;
 
   margin-bottom: 10px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .testimonials-heading h2 {
   margin: 0 0 10px;
 
-  color: #082c45;
+  color: var(--text-heading);
 
   font-family: Georgia, "Times New Roman", serif;
 
@@ -61,16 +70,20 @@
   line-height: 1.2;
 
   font-weight: 500;
+
+  transition: color 0.3s ease;
 }
 
 .testimonials-heading p {
   margin: 0;
 
-  color: #557084;
+  color: var(--text-secondary);
 
   font-size: 12px;
 
   line-height: 1.6;
+
+  transition: color 0.3s ease;
 }
 
 
@@ -87,7 +100,7 @@
 .add-review-btn {
   border: none;
 
-  background: #008b63;
+  background: var(--primary);
 
   color: #ffffff;
 
@@ -105,7 +118,7 @@
 }
 
 .add-review-btn:hover {
-  background: #006f50;
+  background: var(--primary-hover);
 
   transform: translateY(-2px);
 }
@@ -126,13 +139,18 @@
 
   box-sizing: border-box;
 
-  background: #ffffff;
+  background: var(--bg-card);
 
-  border: 1px solid #c9f0df;
+  border: 1px solid var(--border);
 
   border-radius: 12px;
 
-  box-shadow: 0 8px 25px rgba(0, 100, 70, 0.08);
+  box-shadow: var(--testimonial-form-shadow);
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .review-form h3 {
@@ -140,7 +158,7 @@
 
   text-align: center;
 
-  color: #082c45;
+  color: var(--text-heading);
 
   font-family: Georgia, "Times New Roman", serif;
 
@@ -172,7 +190,7 @@
 
   margin-bottom: 6px;
 
-  color: #31526a;
+  color: var(--text-secondary);
 
   font-size: 11px;
 
@@ -180,7 +198,9 @@
 }
 
 
-/* Inputs */
+/* =========================================
+   INPUTS
+========================================= */
 
 .form-group input,
 .form-group select,
@@ -191,34 +211,39 @@
 
   padding: 10px 11px;
 
-  border: 1px solid #cce9dd;
+  border: 1px solid var(--input-border);
 
   border-radius: 7px;
 
   outline: none;
 
-  background: #fbfffd;
+  background: var(--input-bg);
 
-  color: #31526a;
+  color: var(--text-primary);
 
   font-family: inherit;
 
   font-size: 11px;
 
-  transition: 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #9aabb4;
+  color: var(--placeholder-color);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #00a878;
+  border-color: var(--primary);
 
-  box-shadow: 0 0 0 2px rgba(0, 168, 120, 0.08);
+  box-shadow:
+    0 0 0 2px var(--input-focus-shadow);
 }
 
 .form-group textarea {
@@ -228,7 +253,9 @@
 }
 
 
-/* Submit button */
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
 
 .submit-review-btn {
   display: block;
@@ -241,7 +268,7 @@
 
   border-radius: 20px;
 
-  background: #008b63;
+  background: var(--primary);
 
   color: #ffffff;
 
@@ -253,7 +280,7 @@
 }
 
 .submit-review-btn:hover {
-  background: #006f50;
+  background: var(--primary-hover);
 
   transform: translateY(-2px);
 }
@@ -292,7 +319,8 @@
 
   width: max-content;
 
-  animation: infiniteTestimonials 30s linear infinite;
+  animation:
+    infiniteTestimonials 30s linear infinite;
 
   will-change: transform;
 }
@@ -324,9 +352,9 @@
 
   box-sizing: border-box;
 
-  background: #ffffff;
+  background: var(--bg-card);
 
-  border: 1px solid #c9f0df;
+  border: 1px solid var(--testimonial-border);
 
   border-radius: 10px;
 
@@ -334,9 +362,13 @@
 
   padding: 0 18px 18px;
 
-  box-shadow: 0 3px 12px rgba(0, 100, 70, 0.04);
+  box-shadow: var(--testimonial-card-shadow);
 
-  transition: transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
@@ -383,7 +415,7 @@
 }
 
 .empty-stars {
-  color: #dce8e3;
+  color: var(--empty-stars);
 }
 
 
@@ -402,9 +434,9 @@
 
   justify-content: center;
 
-  background: #eafff5;
+  background: var(--quote-bg);
 
-  color: #2fd99c;
+  color: var(--quote-color);
 
   font-family: Georgia, "Times New Roman", serif;
 
@@ -421,11 +453,13 @@
 .testimonial-review {
   margin: 8px 0 16px;
 
-  color: #425c6c;
+  color: var(--text-secondary);
 
   font-size: 10.5px;
 
   line-height: 1.65;
+
+  transition: color 0.3s ease;
 }
 
 
@@ -440,7 +474,9 @@
 
   margin-bottom: 12px;
 
-  background: #e2f1eb;
+  background: var(--testimonial-divider);
+
+  transition: background-color 0.3s ease;
 }
 
 
@@ -468,9 +504,9 @@
 
   border-radius: 50%;
 
-  background: #d5f8e8;
+  background: var(--avatar-bg);
 
-  color: #008b63;
+  color: var(--avatar-text);
 
   display: flex;
 
@@ -481,6 +517,10 @@
   font-size: 10px;
 
   font-weight: 600;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 
@@ -493,7 +533,7 @@
 .patient-info h4 {
   margin: 0 0 3px;
 
-  color: #203c4e;
+  color: var(--text-primary);
 
   font-size: 11px;
 
@@ -503,7 +543,7 @@
 .patient-info span {
   display: block;
 
-  color: #7a8b95;
+  color: var(--text-secondary);
 
   font-size: 9px;
 }
@@ -539,19 +579,99 @@
 
   background: transparent;
 
-  color: #78918b;
+  color: var(--reset-color);
 
   font-size: 9px;
 
   cursor: pointer;
 
   opacity: 0.7;
+
+  transition: color 0.2s ease;
 }
 
 .reset-reviews-btn:hover {
-  color: #008b63;
+  color: var(--primary);
 
   opacity: 1;
+}
+
+
+/* =========================================
+   LIGHT MODE VARIABLES
+========================================= */
+
+:root {
+
+  --testimonial-badge-bg: #d7f9e9;
+
+  --testimonial-badge-text: #008b63;
+
+  --testimonial-border: #c9f0df;
+
+  --testimonial-divider: #e2f1eb;
+
+  --quote-bg: #eafff5;
+
+  --quote-color: #2fd99c;
+
+  --avatar-bg: #d5f8e8;
+
+  --avatar-text: #008b63;
+
+  --empty-stars: #dce8e3;
+
+  --reset-color: #78918b;
+
+  --placeholder-color: #9aabb4;
+
+  --input-focus-shadow:
+    rgba(0, 168, 120, 0.08);
+
+  --testimonial-form-shadow:
+    0 8px 25px rgba(0, 100, 70, 0.08);
+
+  --testimonial-card-shadow:
+    0 3px 12px rgba(0, 100, 70, 0.04);
+}
+
+
+/* =========================================
+   DARK MODE VARIABLES
+========================================= */
+
+body.dark-theme {
+
+  --testimonial-badge-bg: #183d34;
+
+  --testimonial-badge-text: #72d9c0;
+
+  --testimonial-border: #2b403a;
+
+  --testimonial-divider: #30463f;
+
+  --quote-bg: #193c33;
+
+  --quote-color: #72d9c0;
+
+  --avatar-bg: #21483d;
+
+  --avatar-text: #72d9c0;
+
+  --empty-stars: #53665f;
+
+  --reset-color: #9aaba5;
+
+  --placeholder-color: #82948e;
+
+  --input-focus-shadow:
+    rgba(32, 168, 137, 0.18);
+
+  --testimonial-form-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.35);
+
+  --testimonial-card-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -584,26 +704,21 @@
     padding: 50px 18px 60px;
   }
 
-
   .testimonials-heading h2 {
     font-size: 24px;
   }
-
 
   .testimonials-heading p {
     font-size: 11px;
   }
 
-
   .form-row {
     grid-template-columns: 1fr;
   }
 
-
   .review-form {
     padding: 20px 16px;
   }
-
 
   .testimonial-card {
     flex-basis: 280px;
@@ -611,16 +726,12 @@
     width: 280px;
   }
 
-
   .testimonial-group {
     gap: 16px;
 
     padding-right: 16px;
   }
-
-
   .testimonial-track {
     animation-duration: 25s;
   }
-
 }

@@ -33,7 +33,10 @@ body {
     max-width: 550px;
     flex: 1;
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .home-badge {
     display: inline-flex;
     align-items: center;
